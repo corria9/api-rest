@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.api.rest.entity.Cliente;
 import com.api.rest.entity.Cuenta;
 import com.api.rest.service.CuentasService;
 
