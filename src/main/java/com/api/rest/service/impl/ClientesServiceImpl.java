@@ -46,14 +46,12 @@ public class ClientesServiceImpl implements ClientesService {
 
 	@Override
 	public Cliente actualizarCliente(Cliente cliente) {
-		// TODO Auto-generated method stub
-		return null;
+		return this.clientesRepository.save(cliente);
 	}
 
 	@Override
 	public void eliminarCliente(Long id) {
-		// TODO Auto-generated method stub
-		
+		this.clientesRepository.deleteById(id);		
 	}
 
 }
