@@ -29,7 +29,7 @@ public class ClientesServiceImpl implements ClientesService {
 	
 	public List<Cliente> consultarClientes() {
 		
-		List<Object> clientesDataSource = StreamSupport.stream(
+		List<Cliente> clientesDataSource = StreamSupport.stream(
 				this.clientesRepository.findAll().spliterator(), false)
 				.collect(Collectors.toList());
 		
