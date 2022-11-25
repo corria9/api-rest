@@ -46,3 +46,23 @@ select * from cliente.cuentas;
 USE cliente;
 
 CREATE database movimientos;
+
+
+
+USE cliente;
+
+CREATE TABLE movimientos
+(
+    id_movimientos int primary key not null auto_increment,
+    numero_cuenta BIGINT not null,
+    tipo Varchar(10),
+    saldo_inicial FLOAT not null,
+    estado Boolean not null,
+    movimiento Varchar (50) not null
+);
+
+Insert into cliente.movimientos VALUES ('1', '8920221124', 'Corriente', '2000.78', '1', 'Deposito de 400');
+Insert into cliente.movimientos VALUES ('2', '8920221124', 'Ahorro', '4000.02', '2', 'Retiro de 1000');
+
+
+select * from cliente.cuentas;

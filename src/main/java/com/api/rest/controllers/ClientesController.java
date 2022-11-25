@@ -46,7 +46,7 @@ public class ClientesController {
 	
 	@PostMapping
 	@RequestMapping(value = "clientes/guardar", method = RequestMethod.POST)
-	public ResponseEntity<?> guardarAnime(@RequestBody Cliente cliente){
+	public ResponseEntity<?> guardarCliente(@RequestBody Cliente cliente){
 		
 		Cliente clienteGuardado = this.clientesServiceImpl.guardarCliente(cliente);
 		
@@ -55,7 +55,7 @@ public class ClientesController {
 	
 	@PutMapping
 	@RequestMapping(value = "clientes/actualizar", method = RequestMethod.PUT)
-	public ResponseEntity<?> actualizarAnime(@RequestBody Cliente cliente){
+	public ResponseEntity<?> actualizarCliente(@RequestBody Cliente cliente){
 		
 		Cliente clienteActualizado = this.clientesServiceImpl.actualizarCliente(cliente);
 		

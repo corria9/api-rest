@@ -27,4 +27,22 @@ public class CuentasServiceImpl implements CuentasService {
 		return cuentasDataSource;
 	}
 
+	@Override
+	public Cuenta guardarCuenta(Cuenta cuenta) {
+		
+		return this.cuentasRepository.save(cuenta);
+	}
+
+	@Override
+	public Cuenta actualizarCuenta(Cuenta cuenta) {
+		
+		return this.cuentasRepository.save(cuenta);
+	}
+
+	@Override
+	public void eliminarCuenta(Long id) {
+		this.cuentasRepository.deleteById(id);
+		
+	}
+
 }
