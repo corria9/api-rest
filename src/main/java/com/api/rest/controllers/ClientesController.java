@@ -25,13 +25,13 @@ import com.api.rest.service.ClientesService;
 public class ClientesController {
 	
 	@Autowired
-	private ClientesService clienteServiceImpl;
+	private ClientesService clientesServiceImpl;
 	
 	@GetMapping
 	@RequestMapping(value = "consultarClientes", method = RequestMethod.GET)
 	public ResponseEntity<?> consultarClientes(){
 		
-		List<Cliente> clientesConsultados = this.clienteServiceImpl.consultarClientes();
+		List<Cliente> clientesConsultados = this.clientesServiceImpl.consultarClientes();
 		
 		return ResponseEntity.ok(clientesConsultados);
 		

@@ -21,13 +21,13 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "Cliente")
+@Table(name = "cliente")
 public class Cliente {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name ="idCliente")
-	private Long idCliente;
+	@Column(name ="id_cliente")
+	private Long id_cliente;
 	
 	@Column(name ="fecha")
 	private LocalDateTime fecha;
@@ -41,7 +41,7 @@ public class Cliente {
 	@Column(name ="telefono")
 	private Long telefono;
 	
-	@Column(name ="contraseña")
+	@Column(name ="contrasenia")
 	private Boolean contrasenia;
 	
 
