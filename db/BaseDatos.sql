@@ -1,6 +1,17 @@
-CREATE database cliente;
+CREATE DATABASE  IF NOT EXISTS cliente /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE cliente;
+-- MySQL dump 10.13  Distrib 8.0.21, for Win64 (x86_64)
+--
+-- Host: localhost    Database: cliente
+-- ------------------------------------------------------
+-- Server version	8.0.21
 
-use cliente;
+
+
+--
+-- Table structure for table cliente
+--
+
 
 CREATE TABLE cliente 
 (
@@ -23,6 +34,10 @@ select * from cliente.cliente;
 USE cliente;
 
 CREATE database cuentas;
+
+--
+-- Table structure for table cuentas
+--
 
 CREATE TABLE cuentas 
 (
@@ -50,6 +65,11 @@ CREATE database movimientos;
 
 
 USE cliente;
+
+
+--
+-- Table structure for table movimientos
+--
 
 CREATE TABLE movimientos
 (
