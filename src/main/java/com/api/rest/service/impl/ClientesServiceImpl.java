@@ -3,6 +3,7 @@
  */
 package com.api.rest.service.impl;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -34,6 +35,25 @@ public class ClientesServiceImpl implements ClientesService {
 				.collect(Collectors.toList());
 		
 		return clientesDataSource;
+	}
+
+	@Override
+	public Cliente guardarCliente(Cliente cliente) {
+		cliente.setFecha(LocalDateTime.now());
+		
+		return this.clientesRepository.save(cliente);
+	}
+
+	@Override
+	public Cliente actualizarCliente(Cliente cliente) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void eliminarCliente(Long id) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

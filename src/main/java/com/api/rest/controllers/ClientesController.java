@@ -20,21 +20,37 @@ import com.api.rest.service.ClientesService;
  * @Version 1.0 11/24/2022
  * Controlador que manipula el flujo de los servicios rest del microservicio de clientes
  */
+
 @RestController
 @RequestMapping("/clientes")
 public class ClientesController {
-	
+
 	@Autowired
 	private ClientesService clientesServiceImpl;
-	
+
 	@GetMapping
 	@RequestMapping(value = "consultarClientes", method = RequestMethod.GET)
-	public ResponseEntity<?> consultarClientes(){
-		
+	public ResponseEntity<?> consultarClientes() {
+
 		List<Cliente> clientesConsultados = this.clientesServiceImpl.consultarClientes();
-		
+
 		return ResponseEntity.ok(clientesConsultados);
-		
+
 	}
 
 }
+
+/*
+ * @RestController public class ClientesController {
+ * 
+ * @Autowired private ClientesService clientesService;
+ * 
+ * @GetMapping("/clientes") public List<Cliente> consultarClientes(){ return
+ * clientesServiceImpl.consultarClientes(); }
+ * 
+ * @GetMapping("/clientes/{id}") public ResponseEntity<Cliente>
+ * obtenerCliente(@PathVariable Integer id) { try { List<Cliente> cliente =
+ * clientesService.consultarClientes(id); return new
+ * ResponseEntity<Cliente>(HttpStatus.OK); } catch (Exception excepcion){ return
+ * new ResponseEntity<Cliente>(HttpStatus.NOT_FOUND); } } }
+ */
